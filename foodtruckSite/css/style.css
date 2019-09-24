@@ -1,0 +1,369 @@
+:root {
+    --green: #42bfb4;
+    --pink: #ed1968;
+    --acent-gray: #cccccb;
+    --text-col1: #231f20;
+    --text-col2: #ffffff;
+
+    --gutter: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+li {
+    list-style: none;
+}
+
+.wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.mobNone {
+    display: none;
+}
+
+.hearth {
+    display: none;
+}
+
+/*Mobile*/
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: block;
+    height: 7vh;
+}
+
+nav {
+    height: 7vh;
+    background-color: var(--text-col2);
+    font-family: 'Roboto', sans-serif;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: var(--text-col1) solid 2px;
+}
+
+.burger {
+    display: block;
+    cursor: pointer;
+    margin: 0 .7rem;
+}
+
+.burger div {
+    height: 3px;
+    width: 25px;
+    margin: 5px;
+    background-color: var(--text-col1);
+
+    transition: all 0.3s ease;
+}
+
+.logo {
+    box-sizing: border-box;
+    height: 7vh;
+    background-color: var(--text-col1);
+    padding: 0 .5rem 0 .5rem;
+}
+
+.logo img {
+    margin-top: calc(10% / 2);
+    height: 65%;
+}
+
+.navLinks {
+    position: absolute;
+    right: -10px;
+    top: 7vh;
+    height: 93vh;
+    background-color: var(--text-col2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+    padding-bottom: 12vh;
+    padding-top: 1rem;
+    border-left: var(--text-col1) solid 2px;
+
+    min-width: 20em;
+}
+
+.navLinks li {
+    margin: 0 .5rem 1rem;
+    opacity: 0;
+}
+
+.navLinks a {
+    text-decoration: none;
+    color: var(--text-col1);
+    font-weight: bold;
+    font-size: 1em;
+}
+
+main {
+    padding-top: 9.5vh;
+    min-height: 100vh;
+}
+
+.foodtrucks {
+    margin-bottom: 2rem;
+}
+
+.hs {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fill, auto);
+    overflow-x: scroll;
+    justify-items: center;
+    grid-gap: .5rem;
+}
+
+.item {
+    height: auto;
+    width: 44vw;
+    overflow: hidden;
+
+    border-radius: 5px 5px 0 0;
+}
+
+.item:last-child {
+    background-color: var(--green);
+}
+
+.item img {
+    width: 100%;
+    height: auto;
+}
+
+.item h3 {
+    margin: .4em .6em;
+    color: var(--text-col2);
+}
+
+.hearth {
+    height: 1rem;
+    width: 1rem;
+    background-color: green;
+    margin-right: 1rem
+}
+
+.itemHead {
+    width: 100%;
+    background-color: var(--pink);
+    padding: .2rem .3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+.foodtruckImg {
+    max-width: 100%;   
+}
+
+.foodtruckInfo {
+    padding-bottom: 2rem;
+}
+
+.foodtruckInfo h2 {
+    margin-bottom: 1em;
+    margin-left: 1rem;
+}
+
+.foodtruckInfo p {
+    max-width: 30em;
+}
+
+.foodtruckInfo th  {
+    text-align: left;
+    min-width: 11em;
+}
+
+.foodtruckInfo td {
+    text-align: left;
+}
+
+.foodtruckImg {
+    grid-area: truckImg;
+}
+
+.truckText {
+    grid-area: truckText;
+    margin: 0 1.2em 0 1.2em;
+}
+
+.truckText h3 {
+    margin-top: 1em;
+}
+
+.truckImg {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "truckImg"
+    "truckText"
+}
+
+.prodGeg, .truckGeg {
+    margin: 2em 1em 0
+}
+
+.prodGeg  h3, .truckGeg h3 {
+    margin-bottom: 1rem;
+}
+
+.noScroll {
+    scrollbar-width: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.noScroll::-webkit-scrollbar {
+    display: none;
+}
+
+
+@media screen and (min-width: 768px) {
+    .hs {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-auto-flow: row;
+    }
+
+    .mobNone {
+        display: block;
+    }
+
+    .hearth {
+        display: block;
+    }
+
+    .item {
+        width: 100%;
+    }
+
+    .truckImg {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "truckImg truckText"
+    }
+
+    .truckText h3 {
+        margin-top: 0;
+    }
+}
+
+
+@media screen and (min-width: 1024px) {
+    .wrapper {
+        max-width: 1000px;
+    }
+
+    .burger {
+        display: none;
+    }
+
+    .logo {
+        padding: 0 1.5rem 0 1.2rem;
+    }
+
+    .navLinks {
+        position: relative;
+
+        justify-content: flex-start;
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+        margin: 0 1em 0 0;
+
+        right: 0;
+        top: 0;
+        height: 0;
+
+        transform: translateX(0);
+        padding-bottom: 0;
+        padding-top: 0;
+        border-left: none;        
+    }
+
+    .navLinks li {
+        opacity: 1;
+        margin: 0 .5em;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .wrapper {
+        max-width: 87vw;
+    }
+}
+
+
+/***************
+Header
+***************/
+
+/***************
+Main
+***************/
+
+/***************
+Footer
+***************/
+
+
+
+.navActive {
+    transform: translateX(0%);
+}
+
+
+/***************
+Animation
+***************/
+/*Nav links fade in*/
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/*Burger Menu*/
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
