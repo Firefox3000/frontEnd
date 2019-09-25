@@ -1,3 +1,18 @@
+
+
+
+
+
+
+function setup() {
+    for (let i = 0; i < document.querySelectorAll('.hart').length; i++) {
+        document.querySelectorAll('.hart')[i].addEventListener('click', hartCol);
+    }
+}
+
+setup();
+
+
 const navSlide = () => {
     //Toggle Nav
     document.querySelector('.burger').addEventListener('click', () => {
@@ -18,6 +33,11 @@ const navSlide = () => {
 }
 
 navSlide();
+
+function hartCol(e){
+    e.currentTarget.classList.toggle('hartActive');
+}
+
 
 
 

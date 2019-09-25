@@ -27,17 +27,13 @@ li {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+}
+
 .wrapper {
     max-width: 700px;
     margin: 0 auto;
-}
-
-.mobNone {
-    display: none;
-}
-
-.hearth {
-    display: none;
 }
 
 /*Mobile*/
@@ -123,8 +119,12 @@ main {
     min-height: 100vh;
 }
 
+/*Foodtruck items*/
+
 .foodtrucks {
     margin-bottom: 2rem;
+    margin-left: 1rem;
+    /* margin-right: 1rem; */
 }
 
 .hs {
@@ -137,41 +137,47 @@ main {
 }
 
 .item {
-    height: auto;
-    width: 44vw;
+    height: 200px;
+    /* max-height: 160px; */
+    width: 40vw;
+    /* max-width: 300px; */
     overflow: hidden;
-
-    border-radius: 5px 5px 0 0;
-}
-
-.item:last-child {
-    background-color: var(--green);
+    border-radius: 5px;
 }
 
 .item img {
-    width: 100%;
-    height: auto;
+    width: 42vw;
+    /* height: 200px; */
 }
 
 .item h3 {
-    margin: .4em .6em;
+    margin-left: .6em;
     color: var(--text-col2);
+    text-decoration: none;
 }
 
-.hearth {
+.hart {
     height: 1rem;
     width: 1rem;
-    background-color: green;
-    margin-right: 1rem
+    background-color: orange;
+    margin-right: 1rem;
+    cursor: pointer;
+    border-radius: 3px;
+
+    transition: .3s;
 }
 
 .itemHead {
     width: 100%;
+    height: 2.5rem;
     background-color: var(--pink);
-    padding: .2rem .3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.item:last-child {
+    background-color: var(--green);
 }
 
 
@@ -245,6 +251,35 @@ main {
 }
 
 
+
+
+footer {
+    width: 100%;
+    min-height: 20rem;
+    background-color: var(--text-col1);
+
+    margin-top: 2rem;
+    padding: 2rem 0; 
+}
+
+footer ul {
+    margin: 0 auto;
+}
+
+footer li {
+    color: var(--text-col2);
+}
+
+
+
+
+
+.hartActive {
+    background-color: #42bfb4;
+}
+
+
+
 @media screen and (min-width: 768px) {
     .hs {
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -255,12 +290,28 @@ main {
         display: block;
     }
 
-    .hearth {
+    .hart {
         display: block;
     }
 
     .item {
         width: 100%;
+        max-width: 300px;
+        /* height: 600px; */
+    }
+
+    
+    .item {
+        min-height: 225px;
+    }
+
+    .item img {
+        height: 225px;
+        width: auto;
+    }
+
+    .foodtrucks {
+        margin: 0 auto;
     }
 
     .truckImg {
@@ -311,11 +362,24 @@ main {
         opacity: 1;
         margin: 0 .5em;
     }
+
+    .foodtrucks {
+        margin: 0 auto;
+    }
+
+    .item {
+        min-height: 225px;
+    }
+
+    .item img {
+        height: 225px;
+        width: auto;
+    }
 }
 
 @media screen and (min-width: 1300px) {
     .wrapper {
-        max-width: 87vw;
+        max-width: 1250px;
     }
 }
 
