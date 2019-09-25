@@ -1,9 +1,4 @@
 
-
-
-
-
-
 function setup() {
     for (let i = 0; i < document.querySelectorAll('.hart').length; i++) {
         document.querySelectorAll('.hart')[i].addEventListener('click', hartCol);
@@ -23,7 +18,7 @@ const navSlide = () => {
             if (link.style.animation) {
                 link.style.animation = '';
             } else {
-                link.style.animate = link.style.animation = `navLinkFade 0.5s ease forwards ${index / 10 + 0.4}s`
+                link.style.animate = link.style.animation = `navLinkFade 0.5s ease forwards ${index / 10 + 0.2}s`
             }
         });
         

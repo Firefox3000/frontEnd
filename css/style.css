@@ -4,8 +4,6 @@
     --acent-gray: #cccccb;
     --text-col1: #231f20;
     --text-col2: #ffffff;
-
-    --gutter: 10px;
 }
 
 * {
@@ -37,6 +35,8 @@ a {
 }
 
 /*Mobile*/
+
+/*Header*/
 header {
     position: fixed;
     top: 0;
@@ -114,17 +114,17 @@ nav {
     font-size: 1em;
 }
 
+/*Main*/
+
 main {
     padding-top: 9.5vh;
     min-height: 100vh;
 }
 
 /*Foodtruck items*/
-
 .foodtrucks {
     margin-bottom: 2rem;
     margin-left: 1rem;
-    /* margin-right: 1rem; */
 }
 
 .hs {
@@ -134,20 +134,24 @@ main {
     overflow-x: scroll;
     justify-items: center;
     grid-gap: .5rem;
+    padding: 0 1rem;
+    padding-right: 1rem;
 }
 
 .item {
     height: 200px;
-    /* max-height: 160px; */
-    width: 40vw;
     /* max-width: 300px; */
+    /* max-height: 160px; */
+    /* width: 75vw; */
+    width: 300px;
     overflow: hidden;
     border-radius: 5px;
 }
 
 .item img {
-    width: 42vw;
+    width: 100%;
     /* height: 200px; */
+    min-height: 100%;
 }
 
 .item h3 {
@@ -155,6 +159,7 @@ main {
     color: var(--text-col2);
     text-decoration: none;
 }
+
 
 .hart {
     height: 1rem;
@@ -179,9 +184,6 @@ main {
 .item:last-child {
     background-color: var(--green);
 }
-
-
-
 
 
 .foodtruckImg {
@@ -250,9 +252,7 @@ main {
     display: none;
 }
 
-
-
-
+/*Footer resultaat*/
 footer {
     width: 100%;
     min-height: 20rem;
@@ -270,48 +270,18 @@ footer li {
     color: var(--text-col2);
 }
 
-
-
-
-
 .hartActive {
-    background-color: #42bfb4;
+    background-color: var(--green);
 }
-
-
 
 @media screen and (min-width: 768px) {
     .hs {
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         grid-auto-flow: row;
-    }
-
-    .mobNone {
-        display: block;
-    }
-
-    .hart {
-        display: block;
     }
 
     .item {
         width: 100%;
-        max-width: 300px;
-        /* height: 600px; */
-    }
-
-    
-    .item {
-        min-height: 225px;
-    }
-
-    .item img {
-        height: 225px;
-        width: auto;
-    }
-
-    .foodtrucks {
-        margin: 0 auto;
     }
 
     .truckImg {
@@ -321,7 +291,7 @@ footer li {
     }
 
     .truckText h3 {
-        margin-top: 0;
+        margin-top: 2em;
     }
 }
 
@@ -366,20 +336,11 @@ footer li {
     .foodtrucks {
         margin: 0 auto;
     }
-
-    .item {
-        min-height: 225px;
-    }
-
-    .item img {
-        height: 225px;
-        width: auto;
-    }
 }
 
 @media screen and (min-width: 1300px) {
     .wrapper {
-        max-width: 1250px;
+        max-width: 1220px;
     }
 }
 
