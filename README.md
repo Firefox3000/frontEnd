@@ -10,3 +10,6 @@ https://css-tricks.com/snippets/css/complete-guide-grid/
 
 Guide to css Flex-box:
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+Drop down menu style voorbeelden: 
+https://codepen.io/vkjgr/pen/VYMeXp
