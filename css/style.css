@@ -70,16 +70,20 @@ nav {
     display: block;
     cursor: pointer;
     margin: 0 .7rem;
-}
 
-.burger div {
-    height: 3px;
-    width: 25px;
-    margin: 5px;
-    background-color: var(--text-col1);
+    color: var(--text-col1);
+    width: auto;
+    height: 22px;
 
     transition: all 0.3s ease;
+
+    overflow: visible;
 }
+
+.burger rect {
+    transition: all 0.3s ease;
+}
+
 
 .logo {
     box-sizing: border-box;
@@ -130,6 +134,119 @@ nav {
 main {
     padding-top: 9.5vh;
     min-height: 100vh;
+}
+
+
+
+
+/*filter form*/
+form {
+    margin: .5rem;
+    max-width: 500px;
+}
+
+select {
+    min-width: 200px;
+    margin: .2rem 0 .7rem 0;
+    width: 100%;
+
+    background-color: var(--text-col2);
+    border: thin solid var(--text-col1);
+    border-radius: 1px;
+    display: inline-block;
+    font: inherit;
+    line-height: 1.5em;
+    padding: 0.5em 3.5em 0.5em 1em;
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    background-image:
+        linear-gradient(45deg, transparent 50%, var(--text-col2) 50%),
+        linear-gradient(135deg, var(--text-col2) 50%, transparent 50%),
+        linear-gradient(to right, var(--pink), var(--pink));
+    background-position:
+        calc(100% - 20px) calc(1em + 2px),
+        calc(100% - 15px) calc(1em + 2px),
+        100% 0;
+    background-size:
+        5px 5px,
+        5px 5px,
+        2.5em 2.5em;
+    background-repeat: no-repeat;
+}
+
+select:focus {
+    background-image:
+        linear-gradient(45deg, white 50%, transparent 50%),
+        linear-gradient(135deg, transparent 50%, white 50%),
+        linear-gradient(var(--green), var(--green));
+    background-position:
+        calc(100% - 15px) 1em,
+        calc(100% - 20px) 1em,
+        100% 0;
+    background-size:
+        5px 5px,
+        5px 5px,
+        2.5em 2.5em;
+    background-repeat: no-repeat;
+    border-color: grey;
+    outline: 0;
+}
+
+select option {
+    /* background-color: #; */
+    cursor: pointer;
+}
+
+/*Slider*/
+input[type=range] {
+    -webkit-appearance: none;
+
+    margin: .2rem 0 .7rem 0;
+    appearance: none;
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    background: #d3d3d3;
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background: var(--pink);
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+
+/*Tekst*/
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid var(--text-col1);
+    border-radius: 1px;
+    box-sizing: border-box;
+}
+
+/*Submit*/
+input[type=submit] {
+    border: none;
+    cursor: pointer;
+
+    font-size: 1rem;
+    padding: 16px 32px;
+    background-color: var(--pink);
+    border-radius: 4px;
+    color: var(--text-col2)
 }
 
 /*Foodtruck items*/
@@ -185,7 +302,7 @@ main {
 
 
 .foodtruckImg {
-    max-width: 100%;   
+    max-width: 100%;
 }
 
 .foodtruckInfo {
@@ -201,7 +318,7 @@ main {
     max-width: 30em;
 }
 
-.foodtruckInfo th  {
+.foodtruckInfo th {
     text-align: left;
     min-width: 11em;
 }
@@ -227,16 +344,18 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
-    grid-template-areas: 
-    "truckImg"
-    "truckText"
+    grid-template-areas:
+        "truckImg"
+        "truckText"
 }
 
-.prodGeg, .truckGeg {
+.prodGeg,
+.truckGeg {
     margin: 2em 1em 0
 }
 
-.prodGeg  h3, .truckGeg h3 {
+.prodGeg h3,
+.truckGeg h3 {
     margin-bottom: 1rem;
 }
 
@@ -257,7 +376,7 @@ footer {
     background-color: var(--text-col1);
 
     margin-top: 2rem;
-    padding: 2rem 0; 
+    padding: 2rem 0;
 }
 
 footer ul {
@@ -281,8 +400,8 @@ footer li {
 
     .truckImg {
         grid-template-columns: 1fr 1fr;
-        grid-template-areas: 
-        "truckImg truckText"
+        grid-template-areas:
+            "truckImg truckText"
     }
 
     .truckText h3 {
@@ -320,7 +439,7 @@ footer li {
         transform: translateX(0);
         padding-bottom: 0;
         padding-top: 0;
-        border-left: none;        
+        border-left: none;
     }
 
     .navLinks li {
@@ -376,14 +495,18 @@ Animation
 }
 
 /*Burger Menu*/
-.toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
+
+/* 25w 3h */
+.toggle rect:first-child {
+    transform-origin: 0 0;
+    transform: rotate(45deg) translate(4px, -4px);
 }
 
-.toggle .line2 {
+.toggle rect:nth-child(2) {
     opacity: 0;
 }
 
-.toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
+.toggle rect:last-child {
+    transform-origin: 0 100%;
+    transform: rotate(-45deg) translate(4.5px, 2.5px);
 }

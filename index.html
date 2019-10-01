@@ -35,18 +35,36 @@
                 </li>
             </ul>
 
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
+            <svg version="1.1" class="burger" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 25 21" xml:space="preserve">
+                <rect x="0" y="0" width="25" height="3" />
+                <rect x="0" y="9" width="25" height="3" />
+                <rect x="0" y="18" width="25" height="3" />
+            </svg>
         </nav>
     </header>
 
     <main>
-        <div class="zoekBalk">
-            <input type="text" name="Zoek">
-            <button class="zoekKnop"> Zoeken</button>
+        <div class="wrapper">
+            <form class="itemfilters">
+                <input type="text" name="Zoek" placeholder="Zoeken...">
+                Keuken<br>
+                <select class="dropdown1" name="dropown">
+                    <option value="chinees">Chinees</option>
+                    <option value="grieks">Grieks</option>
+                    <option value="italiaans">Italiaans</option>
+                </select>
+                Grecht<br>
+                <select class="dropdown1" name="dropown">
+                    <option value="optie1">Pasta</option>
+                    <option value="optie2">Hamburgers</option>
+                    <option value="optie3">Broodjes</option>
+                </select>
+                Prijs<br>
+                <input type="range" min="1" max="100" value="50">
+
+                <input type="submit" value="Zoeken">
+            </form>
         </div>
 
         <section class="foodtrucks">
@@ -90,103 +108,103 @@
         </section>
 
         <section class="foodtrucks">
-                <h3>Leuk voor Kinderen</h3>
-                <ul class="noScroll">
-                    <li class="item">
-                        <div class="itemHead">
-                            <h3>Pasta Joe</h3>
-                            <span class="hart"></span>
-                        </div>
-                        <img src="img/foodtruck4.jpg" alt="de Foodtruck van Pasta Joe">
-                    </li>
-                    <li class="item">
-                        <div class="itemHead">
-                            <h3>Pasta Joe</h3>
-                            <span class="hart"></span>
-                        </div>
-                        <img src="img/foodtruck5.jpg" alt="de Foodtruck van Pasta Joe">
-                    </li>
-                    <li class="item">
-                        <div class="itemHead">
-                            <h3>Pasta Joe</h3>
-                            <span class="hart"></span>
-                        </div>
-                        <img src="img/foodtruck6.jpg" alt="de Foodtruck van Pasta Joe">
-                    </li>
-                    <li class="item">
-                        <div class="itemHead">
-                            <h3>Pasta Joe</h3>
-                            <span class="hart"></span>
-                        </div>
-                        <img src="img/foodtruck1.jpg" alt="de Foodtruck van Pasta Joe">
-                    </li>
-                    <li class="item">
-                        <div class="itemHead">
-                            <h3>Pasta Joe</h3>
-                            <span class="hart"></span>
-                        </div>
-                        <img src="img/foodtruck.jpg" alt="de Foodtruck van Pasta Joe">
-                    </li>
-                    <li class="item">
-                        <div class="itemHead">
-                            <h3>Pasta Joe</h3>
-                            <span class="hart"></span>
-                        </div>
-                        <img src="img/foodtruck5.jpg" alt="de Foodtruck van Pasta Joe">
-                    </li>
-                    <li class="item">
-                        <div class="itemHead">
-                            <h3>Pasta Joe</h3>
-                            <span class="hart"></span>
-                        </div>
-                        <img src="img/foodtruck3.jpg" alt="de Foodtruck van Pasta Joe">
-                    </li>
+            <h3>Leuk voor Kinderen</h3>
+            <ul class="noScroll">
+                <li class="item">
+                    <div class="itemHead">
+                        <h3>Pasta Joe</h3>
+                        <span class="hart"></span>
+                    </div>
+                    <img src="img/foodtruck4.jpg" alt="de Foodtruck van Pasta Joe">
+                </li>
+                <li class="item">
+                    <div class="itemHead">
+                        <h3>Pasta Joe</h3>
+                        <span class="hart"></span>
+                    </div>
+                    <img src="img/foodtruck5.jpg" alt="de Foodtruck van Pasta Joe">
+                </li>
+                <li class="item">
+                    <div class="itemHead">
+                        <h3>Pasta Joe</h3>
+                        <span class="hart"></span>
+                    </div>
+                    <img src="img/foodtruck6.jpg" alt="de Foodtruck van Pasta Joe">
+                </li>
+                <li class="item">
+                    <div class="itemHead">
+                        <h3>Pasta Joe</h3>
+                        <span class="hart"></span>
+                    </div>
+                    <img src="img/foodtruck1.jpg" alt="de Foodtruck van Pasta Joe">
+                </li>
+                <li class="item">
+                    <div class="itemHead">
+                        <h3>Pasta Joe</h3>
+                        <span class="hart"></span>
+                    </div>
+                    <img src="img/foodtruck.jpg" alt="de Foodtruck van Pasta Joe">
+                </li>
+                <li class="item">
+                    <div class="itemHead">
+                        <h3>Pasta Joe</h3>
+                        <span class="hart"></span>
+                    </div>
+                    <img src="img/foodtruck5.jpg" alt="de Foodtruck van Pasta Joe">
+                </li>
+                <li class="item">
+                    <div class="itemHead">
+                        <h3>Pasta Joe</h3>
+                        <span class="hart"></span>
+                    </div>
+                    <img src="img/foodtruck3.jpg" alt="de Foodtruck van Pasta Joe">
+                </li>
 
-                    <li class="item">
-                        Bekijk alle foodtrucks
-                    </li>
-                </ul>
-            </section>
+                <li class="item">
+                    Bekijk alle foodtrucks
+                </li>
+            </ul>
+        </section>
 
-            <section class="foodtrucks">
-                <h3>Top rated</h3>
-                <ul class="noScroll">
-                    <li class="item">
-                        <div class="itemHead">
-                            <h3>Pasta Joe</h3>
-                            <span class="hart"></span>
-                        </div>
-                        <img src="img/foodtruck2.jpg" alt="de Foodtruck van Pasta Joe">
-                    </li>
-                    <li class="item">
-                        <div class="itemHead">
-                            <h3>Pasta Joe</h3>
-                            <span class="hart"></span>
-                        </div>
-                        <img src="img/foodtruck5.jpg" alt="de Foodtruck van Pasta Joe">
-                    </li>
-                    <li class="item">
-                        <div class="itemHead">
-                            <h3>Pasta Joe</h3>
-                            <span class="hart"></span>
-                        </div>
-                        <img src="img/foodtruck6.jpg" alt="de Foodtruck van Pasta Joe">
-                    </li>
-                    <li class="item">
-                        <div class="itemHead">
-                            <h3>Pasta Joe</h3>
-                            <span class="hart"></span>
-                        </div>
-                        <img src="img/foodtruck3.jpg" alt="de Foodtruck van Pasta Joe">
-                    </li>
-                    <li class="item">
-                        <div class="itemHead">
-                            <h3>Pasta Joe</h3>
-                            <span class="hart"></span>
-                        </div>
-                        <img src="img/foodtruck6.jpg" alt="de Foodtruck van Pasta Joe">
-                    </li>
-                </ul>
+        <section class="foodtrucks">
+            <h3>Top rated</h3>
+            <ul class="noScroll">
+                <li class="item">
+                    <div class="itemHead">
+                        <h3>Pasta Joe</h3>
+                        <span class="hart"></span>
+                    </div>
+                    <img src="img/foodtruck2.jpg" alt="de Foodtruck van Pasta Joe">
+                </li>
+                <li class="item">
+                    <div class="itemHead">
+                        <h3>Pasta Joe</h3>
+                        <span class="hart"></span>
+                    </div>
+                    <img src="img/foodtruck5.jpg" alt="de Foodtruck van Pasta Joe">
+                </li>
+                <li class="item">
+                    <div class="itemHead">
+                        <h3>Pasta Joe</h3>
+                        <span class="hart"></span>
+                    </div>
+                    <img src="img/foodtruck6.jpg" alt="de Foodtruck van Pasta Joe">
+                </li>
+                <li class="item">
+                    <div class="itemHead">
+                        <h3>Pasta Joe</h3>
+                        <span class="hart"></span>
+                    </div>
+                    <img src="img/foodtruck3.jpg" alt="de Foodtruck van Pasta Joe">
+                </li>
+                <li class="item">
+                    <div class="itemHead">
+                        <h3>Pasta Joe</h3>
+                        <span class="hart"></span>
+                    </div>
+                    <img src="img/foodtruck6.jpg" alt="de Foodtruck van Pasta Joe">
+                </li>
+            </ul>
         </section>
     </main>
 
