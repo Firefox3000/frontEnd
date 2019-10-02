@@ -84,7 +84,6 @@ nav {
     transition: all 0.3s ease;
 }
 
-
 .logo {
     box-sizing: border-box;
     max-width: 75vw;
@@ -129,13 +128,24 @@ nav {
     font-size: 1em;
 }
 
-/*Main*/
+.navLinks a:hover, .navLinks a:focus {
+    outline: none;
+    color: var(--green);
+}
 
+/*Main*/
 main {
     padding-top: 9.5vh;
     min-height: 100vh;
 }
 
+.test {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    transition: all .3s ease-out;
+}
 
 
 
@@ -197,11 +207,6 @@ select:focus {
     outline: none;
 }
 
-select option {
-    /* background-color: #; */
-    cursor: pointer;
-}
-
 /*Slider*/
 input[type=range] {
     -webkit-appearance: none;
@@ -225,6 +230,10 @@ input[type=range]::-webkit-slider-thumb {
     border-radius: 50%;
 }
 
+input[type=range]:focus::-webkit-slider-thumb {
+    background: var(--green);
+}
+
 
 /*Tekst*/
 .zoek1 {
@@ -238,8 +247,9 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 .zoek2 {
-    border: none;
+    border:  1.2px solid rgba(0, 0, 0, 0);
     box-sizing: border-box;
+    border-radius: 20px;
     margin: 2px;
     width: 2rem;
     background-image: url(../img/iconsZoek.svg);
@@ -248,27 +258,25 @@ input[type=range]::-webkit-slider-thumb {
     background-size: 1.2rem auto;
     padding: 12px 20px 12px 40px;
 
-    transition: border .3s ease-out;
+    /* transition: border .3s ease-out; */
     transition: width .3s ease-out;
+    outline: none;
 }
-
 
 .zoek2:focus {
-    width: 100%;
-    border: 1.2px solid var(--pink);
-    border-radius: 20px;
-    box-shadow: none;
-    outline: none;
-    box-sizing: border-box;
-
-    /* box-shadow: 3px 3px var(--pink) inset, -3px -3px var(--pink) inset, 3px -3px var(--pink) inset; */
+    animation: searchAni .5s ease-in-out alternate forwards;
 }
 
-.zoek2:active {
-    border: none;
-    box-shadow: none;
-    outline: none;
+
+@keyframes searchAni {
+    from {border:  1.2px solid rgba(0, 0, 0, 0)}
+    15% {width: 2rem;}
+    25% {border-color: var(--pink);}
+    to {width: 100%; border-color: var(--pink)}
 }
+
+
+
 
 /*Submit*/
 input[type=submit] {
@@ -503,8 +511,6 @@ Main
 /***************
 Footer
 ***************/
-
-
 
 .navActive {
     transform: translateX(0%);

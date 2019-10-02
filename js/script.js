@@ -36,3 +36,9 @@ function hartCol(e){
 
 
 
+
+document.querySelector('h2').addEventListener('click', toggleMenu);
+
+
+
+
